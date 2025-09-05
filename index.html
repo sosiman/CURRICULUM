@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Alberto Trujillo Plaza - Técnico Informático y Docente</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Curriculum vitae 3D interactivo de José Alberto Trujillo Plaza, Técnico Informático y Docente especializado en IA, redes y sistemas.">
+    <meta name="keywords" content="técnico informático, docente, inteligencia artificial, redes, sistemas, Valencia, curriculum 3D">
+    <meta name="author" content="José Alberto Trujillo Plaza">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="José Alberto Trujillo Plaza - Técnico Informático y Docente">
+    <meta property="og:description" content="Curriculum vitae 3D interactivo con experiencia en IA, redes y sistemas informáticos">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sosiman.github.io/curriculum-anthropic/">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-badge" id="loader-badge-container">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0ed2f08d-a698-4114-9c9f-1754ee350d02" data-share-badge-host="https://www.credly.com"></div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="loader-text">Cargando Curriculum 3D...</div>
+        </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="canvas-3d"></canvas>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-content">
+                <div class="logo">JATP</div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#conocimientos">Conocimientos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="title-section">
+                        <div class="title-content">
+                            <h1>José Alberto Trujillo Plaza</h1>
+                            <div class="subtitle">Técnico Informático y Docente</div>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="images/foto curriculum.jpg" alt="José Alberto Trujillo Plaza" />
+                        </div>
+                    </div>
+                    
+                    <div class="hero-info-container">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:albertotplaza@gmail.com">albertotplaza@gmail.com</a>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:621208980">621 208 980</a>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Valencia</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-badge">
+                            <div data-iframe-width="120" data-iframe-height="200" data-share-badge-id="0ed2f08d-a698-4114-9c9f-1754ee350d02" data-share-badge-host="https://www.credly.com"></div>
+                            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Contactar
+                        </a>
+                        <a href="curriculum con logo.pdf" download class="btn btn-secondary">
+                            <i class="fas fa-download"></i> Descargar CV
+                        </a>
+                        <a href="https://sosiman.github.io/TERMINAL/" target="_blank" class="btn btn-secondary">
+                            <i class="fas fa-robot"></i> IA TOOLS
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-3d">
+                    <div class="model-container" id="model-container-1">
+                        <div class="badge-section">
+                            <div data-iframe-width="180" data-iframe-height="320" data-share-badge-id="721ae18b-1a19-4ab5-9206-b88f1326af9b" data-share-badge-host="https://www.credly.com"></div>
+                            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                        <div class="model-3d-section" id="azure-3d-model"></div>
+                    </div>
+                    <div class="model-container" id="model-container-2">
+                        <div class="badge-section">
+                            <div data-iframe-width="180" data-iframe-height="320" data-share-badge-id="fe9e3d0a-f7c1-442b-a118-1dbc2bf71dc8" data-share-badge-host="https://www.credly.com"></div>
+                            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                        <div class="model-3d-section" id="cisco-3d-model"></div>
+                    </div>
+                    <div class="model-container" id="model-container-3">
+                        <div class="badge-section">
+                            <div data-iframe-width="180" data-iframe-height="320" data-share-badge-id="53887f8d-9bfa-4168-9830-b9f235386315" data-share-badge-host="https://www.credly.com"></div>
+                            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                        <div class="model-3d-section" id="networking-3d-model"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formación Académica -->
+        <section id="formacion">
+            <h2 class="section-title">Formación Académica</h2>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Bachiller</h3>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Revoluciona tu Trabajo con IA: Asistentes Virtuales, Automatizaciones y Soluciones Inteligentes para el Transporte y Más</h3>
+                    <p>REGAGE25e00000741054 (251054146)</p>
+                    <p class="hours">150 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <h3>AI-900: Microsoft Azure AI Fundamentals</h3>
+                    <a href="https://www.credly.com/badges/721ae18b-1a19-4ab5-9206-b88f1326af9b/public_url" target="_blank">
+                        Ver certificación en Credly <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Inteligencia Artificial Aplicada a la Empresa IFCT0019</h3>
+                    <p class="hours">280 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Gestión de Aplicaciones en Sistemas Informáticos UC0221_2</h3>
+                    <p class="hours">90 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2024</span>
+                    <h3>Habilitación para la Docencia en Grados A, B y C del Sistema de Formación Profesional</h3>
+                    <p>SSCE0110</p>
+                    <p class="hours">380 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2023</span>
+                    <h3>Montaje y Reparación de Sistemas Microinformáticos</h3>
+                    <p>IFCT0309</p>
+                    <p class="hours">470 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Introducción a Ciberseguridad (Networking Academy)</h3>
+                    <p class="hours">6 horas</p>
+                    <a href="https://www.credly.com/badges/fe9e3d0a-f7c1-442b-a118-1dbc2bf71dc8/public_url" target="_blank">
+                        Ver certificación en Credly <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity)</h3>
+                    <a href="https://www.credly.com/badges/0ed2f08d-a698-4114-9c9f-1754ee350d02/public_url" target="_blank">
+                        Ver certificación en Credly <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2025</span>
+                    <h3>Ciberseguridad Avanzada en Entornos de las Tecnologías de la Información</h3>
+                    <p>F240001MC_1_34-37</p>
+                    <p class="hours">120 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2023</span>
+                    <h3>Seguridad Informática IFCT0109</h3>
+                    <p class="hours">90 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2023</span>
+                    <h3>Mantenimiento de la Seguridad en Sistemas Informáticos 1 UC09592</h3>
+                    <p class="hours">60 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2023</span>
+                    <h3>Mantenimiento de la Seguridad en Sistemas Informáticos 2 UC0959_2</h3>
+                    <p class="hours">60 horas</p>
+                </div>
+
+                <div class="education-card">
+                    <span class="year">2019</span>
+                    <h3>Tecnología de telecomunicaciones, automática ELES0208</h3>
+                    <p class="hours">80 horas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiencia Profesional -->
+        <section id="experiencia">
+            <div class="section-title-container">
+                <div class="section-3d-model left" id="experiencia-3d-left">
+                    <img src="images/workflow.jpeg" alt="N8N Workflow" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+                </div>
+                <h2 class="section-title">Experiencia Profesional</h2>
+                <div class="section-3d-model right" id="experiencia-3d-right">
+                    <!-- Contenedor para ROBOT1.GLB -->
+                </div>
+            </div>
+            
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Técnico en Sistemas Microinformáticos</h3>
+                        </div>
+                        <div class="experience-duration">12 meses</div>
+                    </div>
+                    <div class="experience-functions">
+                        <h4>Funciones principales:</h4>
+                        <ul>
+                            <li>Instalación, configuración y mantenimiento de equipos informáticos y redes locales.</li>
+                            <li>Diagnóstico y resolución de incidencias técnicas en hardware y software.</li>
+                            <li>Gestión de copias de seguridad y recuperación de datos.</li>
+                            <li>Aplicar Inteligencia Artificial para mejorar tareas administrativas: Utilizar herramientas de IA como chatbots y asistentes virtuales para automatizar tareas repetitivas, gestionando agendas y correos electrónicos de manera más eficiente.</li>
+                            <li>Desarrollar soluciones de automatización: Integrar asistentes virtuales, flujos de trabajo automatizados y plataformas como AWS, Azure y Zapier para optimizar los procesos operativos de la empresa.</li>
+                            <li>Analizar y visualizar datos con IA: Utilizar herramientas de análisis de datos y Machine Learning para predecir tendencias y tomar decisiones más informadas en sus tareas diarias.</li>
+                            <li>Crear estrategias comerciales con IA: Desarrollar campañas de marketing digital personalizadas, automatizar embudos de ventas y aplicar modelos predictivos para mejorar la efectividad comercial.</li>
+                            <li>Implementar modelos de IA para tareas específicas: Aplicar IA para tareas del sector transporte, como la gestión de flotas o la optimización de rutas, mejorando la productividad y eficiencia operativa.</li>
+                            <li>Prepararse para certificaciones profesionales: Obtener las habilidades iniciales necesarias para obtener la certificación Azure AI Fundamentals.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Técnico en Informática de Gestión</h3>
+                        </div>
+                        <div class="experience-duration">12 meses</div>
+                    </div>
+                    <div class="experience-functions">
+                        <h4>Funciones principales:</h4>
+                        <ul>
+                            <li>Desarrollo y mantenimiento de aplicaciones de gestión empresarial.</li>
+                            <li>Análisis de requerimientos y diseño de soluciones informáticas.</li>
+                            <li>Gestión de bases de datos y generación de informes.</li>
+                            <li>Implementación e integración de modelos de Inteligencia Artificial en hardware aislado y entornos cloud para empresas de desarrollo.</li>
+                            <li>Aplicación de soluciones de IA para la optimización de procesos empresariales.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Formador de Formación para el Empleo</h3>
+                        </div>
+                        <div class="experience-duration">6 meses</div>
+                    </div>
+                    <div class="experience-functions">
+                        <h4>Funciones principales:</h4>
+                        <ul>
+                            <li>Diseño e impartición de cursos de formación en informática y nuevas tecnologías.</li>
+                            <li>Elaboración de materiales didácticos y guías de aprendizaje.</li>
+                            <li>Evaluación del progreso de los alumnos y adaptación de los contenidos según sus necesidades.</li>
+                            <li>Gestión de plataformas de formación online.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="keywords-section">
+                <h3>Palabras clave destacadas:</h3>
+                <div class="keywords-container">
+                    <span class="keyword-tag">Mantenimiento de hardware</span>
+                    <span class="keyword-tag">Redes locales</span>
+                    <span class="keyword-tag">Soporte técnico</span>
+                    <span class="keyword-tag">Resolución de incidencias</span>
+                    <span class="keyword-tag">Inteligencia artificial</span>
+                    <span class="keyword-tag">Soluciones cloud</span>
+                    <span class="keyword-tag">Formación</span>
+                    <span class="keyword-tag">Diseño de cursos</span>
+                    <span class="keyword-tag">Plataformas e-learning</span>
+                    <span class="keyword-tag">Evaluación de alumnos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conocimientos de Informática -->
+        <section id="conocimientos">
+            <h2 class="section-title">Conocimientos de Informática</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Componentes Hardware y Software</h3>
+                    <p>Diagnóstico, mantenimiento y reparación de equipos informáticos.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-file-word"></i>
+                    <h3>Microsoft Office</h3>
+                    <p>Dominio avanzado de Word, Excel y PowerPoint.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Administración de Servidores Web</h3>
+                    <p>Configuración, mantenimiento y gestión de servidores (incluyendo servicios en Azure).</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Administración de Redes WAN y LAN</h3>
+                    <p>Configuración de routers, switches, diseño, implementación y mantenimiento de redes locales y remotas.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Arquitectura de Ordenadores</h3>
+                    <p>Ensamblaje, configuración y optimización de hardware.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Gestión de Sistemas Operativos</h3>
+                    <p>Instalación, configuración y administración de sistemas Windows, Linux y macOS, así como despliegue en entornos cloud.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Inteligencia Artificial</h3>
+                    <p>Implementación, integración y despliegue de modelos de IA en entornos locales y en la nube (Azure AI).</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Seguridad Informática</h3>
+                    <p>Implementación de medidas de seguridad como TPM, cifrado de discos y autenticación biométrica.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>Virtualización</h3>
+                    <p>Uso de herramientas como VMware y VirtualBox.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Almacenamiento en Red</h3>
+                    <p>Configuración de sistemas NAS y gestión de backups.</p>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Monitorización y Optimización</h3>
+                    <p>Supervisión y optimización del rendimiento de sistemas y redes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Otros Datos de Interés -->
+        <section id="otros-datos">
+            <h2 class="section-title">Otros Datos de Interés</h2>
+            
+            <div class="other-info">
+                <div class="other-info-items">
+                    <div class="other-info-item">
+                        <i class="fas fa-id-card"></i>
+                        <div>
+                            <strong>Permiso de conducir:</strong> A, B
+                        </div>
+                    </div>
+                    <div class="other-info-item">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <strong>Vehículo propio:</strong> Automóvil y Moto
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contacto">
+            <p>© 2024 José Alberto Trujillo Plaza - Técnico Informático y Docente</p>
+            <div class="footer-links">
+                <a href="mailto:albertotplaza@gmail.com">
+                    <i class="fas fa-envelope"></i> albertotplaza@gmail.com
+                </a>
+                <a href="tel:621208980">
+                    <i class="fas fa-phone"></i> 621 208 980
+                </a>
+                <a href="https://sosiman.github.io/TERMINAL/" target="_blank">
+                    <i class="fas fa-robot"></i> IA TOOLS
+                </a>
+                <a href="https://sosiman.github.io/APIFLUX.1-SCHNELL/" target="_blank">
+                    <i class="fas fa-image"></i> APIFLUX.1-SCHNELL
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Three.js para efectos 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- JavaScript Principal -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
